@@ -1,0 +1,13 @@
+table.default {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+table.default th {
+  border-bottom: 1px solid black;
+}
+
+table.default tr:nth-child(odd){
+  background-color: #ddd;
+}

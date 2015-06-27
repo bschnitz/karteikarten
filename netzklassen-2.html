@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Netzklassen (2/2)</title>
+    <link rel="stylesheet" href="bs/css/karte.css" type="text/css">
+    <script type="text/javascript" src="d3/d3.v3.js"></script>
+    <script type="text/javascript" src="bs/js/bs.js"></script>
+    <script type="text/javascript" src="bs/js/table.js"></script>
+    <style>
+      .ip_num, .ip_sep { float:left; }
+      .ip_num { width:2.2em; text-align:center }
+      /*.ip_num.num3{ padding-left:.05em; text-align:left; width:0.7em }*/
+      table.simple { margin:auto; margin-top:0.9em }
+      table.simple { font-size:0.60em }
+      .description { text-align: justify; hyphens: auto }
+      table.simple td { text-align: center }
+      table.simple td.col1 > div {
+        width:10em;
+        text-align: center;
+        vertical-align:center;
+      }
+      table.simple td.col1 > div > div {
+        display:inline-block;
+        margin: auto;
+      }
+      #before { font-size: 0.7em; }
+    </style>
+  </head>
+<body style="width:100%; height:100%" onload="create_classful_network_table()">
+  <script>
+    function create_classful_network_table()
+    {
+      var data = [
+        [ "Netzklasse", "Adressbereich</br>(von / bis)",
+          "Hostlänge",  "#Netze", "#Hosts pro Netz" ],
+        [ "A", '<div><div>'+bs.tools.format_ip([0, 0, 0, 0]) + '</br>' +
+               bs.tools.format_ip([127, 255, 255, 255])+'</div></div>',
+          "24", "128", "16.777.214" ],
+        [ "B", '<div><div>'+bs.tools.format_ip([128, 0, 0, 0]) + '</br>' +
+               bs.tools.format_ip([191, 255, 255, 255])+'</div></div>',
+          "16", "16.384", "65.534" ],
+        [ "C", '<div><div>'+bs.tools.format_ip([192, 0, 0, 0]) + '</br>' +
+               bs.tools.format_ip([223, 255, 255, 255])+'</div></div>',
+          "8", "2.097.152", "254" ],
+        [ "D", '<div><div>'+bs.tools.format_ip([224, 0, 0, 0]) + '</br>' +
+               bs.tools.format_ip([239, 255, 255, 255])+'</div></div>',
+          "-", "-", "-" ],
+        [ "E", '<div><div>'+bs.tools.format_ip([240, 0, 0, 0]) + '</br>' +
+               bs.tools.format_ip([255, 255, 255, 255])+'</div></div>',
+          "-", "-", "-" ]
+      ];
+      var table = bs.d3.table;
+
+      table
+        .attr( "class", "simple" )
+        .td.attr( "class", function(d,i){return "col"+i.toString(10);} )
+
+      d3.select("#table")
+        .datum(data)
+        .call(table);
+     }
+  </script>
+  <div id=outer>
+    <div id=inner>
+      <div class="title">
+        <div>Netzklassen</div>
+        <div class="episode">2/2</div>
+      </div>
+      <div class="content">
+        <div class="description">
+          <b>Lösung</b> für die Übung der vorhergehenden Karte:
+        </div>
+        <div id=table>
+        </div>
+      </div>
+    </div>
+  <div>
+</body>
+</html>
+
+<!-- vim: set tw=80 colorcolumn=+1 : -->

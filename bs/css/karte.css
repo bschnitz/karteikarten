@@ -1,0 +1,55 @@
+html, body { width:100%; height:100%; }
+html { display:table; }
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.description {
+  text-align: justify;
+  hyphens: auto;
+}
+
+#outer {
+  height: 85mm;
+  width: 128mm;
+  outline: 1px solid black;
+  padding: 1cm;
+  margin: auto;
+}
+
+#inner {
+  margin:0px;
+  padding:0px;
+  font-size:0.65cm;
+  font-family:Cantarell;
+}
+
+.content {
+  font-size:0.8em;
+}
+
+.title {
+  font-size: 0.8cm;
+  display: table;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  width:100%;
+  line-height:0.4cm;
+  margin-bottom:0.4cm;
+}
+
+.title div {
+  display: table-cell;
+}
+
+.title .episode {
+  font-size: 0.35cm;
+  text-align: right;
+}
+
+.title .add {
+  font-size: 0.35cm;
+}
+
+/* vim: set tw=80 colorcolumn=+1 : */

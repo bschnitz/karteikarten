@@ -1,0 +1,39 @@
+.textbox div:first-of-type{
+  display: table;
+  height: 20mm;
+  overflow: visible;
+}
+
+.textbox div:first-of-type > div{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 5mm;
+  overflow: visible;
+}
+
+.textbox{
+  stroke: black;
+  stroke-width: 1px;
+  overflow: visible;
+  shape-rendering: crispEdges;
+}
+
+.frame{
+  overflow: visible;
+}
+
+svg{
+  overflow: visible;
+}
+
+.frame_complex > .textbox div:first-of-type > div{
+  overflow: visible;
+  font-size: 4mm;
+}
+
+.assoz {
+  fill: grey;
+}

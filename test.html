@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Netzklassen (1/2)</title>
+    <link rel="stylesheet" href="bs/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="bs/css/karte.css" type="text/css">
+    <link rel="stylesheet" href="bs/css/table.css" type="text/css">
+    <script type="text/javascript" src="d3/d3.v3.js"></script>
+    <script type="text/javascript" src="bs/js/bs.js"></script>
+    <script type="text/javascript" src="bs/js/d3/table.js"></script>
+    <style>
+      .ip_num, .ip_sep { float:left; }
+      .ip_num { width:1cm; text-align:center }
+      .ip_num.num3{ text-align:left; width:0.5cm; padding-left:0.7mm }
+      .col0, .col2 { text-align:center }
+      table.default {
+        margin-top: 0.3cm;
+        font-size: 0.45cm;
+      }
+      td,th {
+        padding: 2mm;
+        padding-left: 4mm;
+        padding-right: 4mm;
+      }
+    </style>
+  </head>
+<body style="width:100%; height:100%" onload="create_classful_network_table()">
+  <script>
+    // Check for the various File API support.
+    //if (window.File && window.FileReader && window.FileList && window.Blob) {
+    //   alert("Yay!");
+    //} else {
+    //    alert('The File APIs are not fully supported by your browser.');
+    //}
+    function create_classful_network_table()
+    {
+      var data = [
+        ["Netzklasse", "Präfix", "Netzmaske"],
+        ["A", "0"    , bs.tools.format_ip([255, 0 , 0 , 0])],
+        ["B", "10"   , bs.tools.format_ip([255,255, 0 , 0])],
+        ["C", "110"  , bs.tools.format_ip([255,255,255, 0])],
+        ["D", "1110" , "multicast"      ],
+        ["E", "1111" , "reserviert"     ]
+      ];
+      var table = bs.d3.table;
+
+      table
+        .attr( "class", "default" )
+        .td.attr( "class", function(d,i){return "col"+i.toString(10);} )
+
+      d3.select("#inner .table")
+        .datum(data)
+        .call(table);
+     }
+  </script>
+  <div id=outer>
+    <div id=inner>
+      <div class="title">
+        <div>Netzklassen</div>
+        <div class="episode">1/2</div>
+      </div>
+      <div class="content">
+        <div class="description">
+          <b>Übung:</b> Adressbereich, Hostlänge, Anzahl der Netze, Anzahl der
+          Hosts pro Netz berechnen.
+        </div>
+        <div class="table">
+        </div>
+      </div>
+    </div>
+  <div>
+</body>
+</html>
+
+<!-- vim: set tw=80 colorcolumn=+1 : -->

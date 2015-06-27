@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Data Link Layer Frame</title>
+    <style>
+      .frame > div {
+        /*width: 16mm;*/
+        height: 20mm;
+        margin: 0;
+        padding-left: 2mm;
+        padding-right: 2mm;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -ms-box-sizing:border-box;
+        box-sizing:border-box;
+        border-left:1px solid black;
+        border-bottom:1px solid black;
+        border-top:1px solid black;
+        font-size: 0.7em;
+      }
+      .frame > div:last-child {
+        border-right:1px solid black;
+      }
+      /*
+      .connector_left {
+        margin:0;
+        border-bottom: 10mm solid #aaa;
+        border-left: 0px solid transparent;
+        border-right: 55mm solid transparent;
+        height: 0;
+        width: 15mm;
+        float: left;
+      }
+      */
+      .connector_left {
+        margin:0;
+        border-bottom: 10mm solid #aaa;
+        border-left: 0px solid transparent;
+        border-right: 55mm solid transparent;
+        height: 0;
+        width: 15mm;
+        float: left;
+        position: relative;
+        display:inline;
+      }
+      .connector_right {
+        margin:0;
+        border-bottom: 10mm solid #aaa;
+        border-left: 3mm solid transparent;
+        border-right: 37mm solid transparent;
+        height: 0;
+        width: 0mm;
+        float: right;
+        position: relative;
+        display:inline;
+      }
+      .connector_right:before{
+        position: relative;
+        border-left: 15mm solid transparent;
+        border-right: 3mm solid transparent;
+        border-top: 10mm solid #aaa;
+        content: "";
+        float:left;
+        left:-18mm;
+        display:inline;
+        margin-left:0.3mm;
+      }
+    </style>
+    <link rel="stylesheet" href="bs/css/karte.css" type="text/css">
+  </head>
+<body style="width:100%; height:100%">
+  <div id=outer>
+    <div id=inner>
+      <div class="title">
+        <div>Frame</div>
+        <div class="episode">Data Link Layer</div>
+      </div>
+      <div class="content">
+        <div class="frame">
+          <div style="min-width:18mm; max-width:18mm">
+            header
+          </div>
+          <div style="min-width:55mm; max-width:55mm">
+            payload <br>
+            (upper layer packet)
+          </div>
+          <div style="min-width:18mm; max-width:18mm">
+            trailer
+          </div>
+        </div>
+        <div class="connector_left">
+        </div>
+        <div class="connector_right">
+        </div>
+        <div class="frame">
+          <div style="min-width:18mm; max-width:18mm">
+            start indicator
+          </div>
+          <div style="min-width:15mm; max-width:15mm">
+            source mac
+          </div>
+          <div style="min-width:15mm; max-width:15mm">
+            dest. mac
+          </div>
+          <div style="min-width:20mm; max-width:20mm">
+            type </br> (of upper layer packet)
+          </div>
+          <div style="min-width:20mm; max-width:20mm">
+            upper layer packet
+          </div>
+          <div style="min-width:22mm; max-width:22mm">
+            FCS (frame checksum)
+          </div>
+          <div style="min-width:18mm; max-width:18mm">
+            stop indicator
+          </div>
+        </div>
+      </div>
+    </div>
+  <div>
+</body>
+</html>
+
+<!-- vim: set tw=80 colorcolumn=+1 : -->
