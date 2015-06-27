@@ -1,10 +1,10 @@
-.textbox div:first-of-type{
+.textbox body:first-of-type{
   display: table;
   height: 20mm;
   overflow: visible;
 }
 
-.textbox div:first-of-type > div{
+.textbox body:first-of-type > div{
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -21,17 +21,8 @@
   shape-rendering: crispEdges;
 }
 
-.frame{
+svg:not(:root) {
   overflow: visible;
-}
-
-svg{
-  overflow: visible;
-}
-
-.frame_complex > .textbox div:first-of-type > div{
-  overflow: visible;
-  font-size: 4mm;
 }
 
 .assoz {

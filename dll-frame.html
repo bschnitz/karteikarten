@@ -5,13 +5,19 @@
     <title>Data Link Layer Frame</title>
     <script type="text/javascript" src="d3/d3.v3.js"></script>
     <script type="text/javascript" src="bs/js/d3/textbox.js"></script>
+    <link rel="stylesheet" href="bs/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="bs/css/karte.css" type="text/css">
     <link rel="stylesheet" href="bs/css/textbox.css" type="text/css">
     <style>
-      .description { text-align: justify; hyphens: auto }
-      .frame text {
-          text-anchor:middle;
-          dominant-baseline:central;
+      .frame_complex > .textbox body:first-of-type > div{
+        overflow: visible;
+        font-size: 4mm;
+      }
+      .drawing {
+        margin-top: 5mm;
+      }
+      .description {
+        margin-top: 3mm;
       }
     </style>
   </head>
@@ -26,7 +32,6 @@
 
       var nodes = d3.select("svg")
         .append("svg")
-        .attr("class", "frame")
         .attr("x", ".1mm")
         .attr("y", ".1mm")
         .selectAll(".textbox")
@@ -63,14 +68,16 @@
         <div>Frame</div>
         <div class="episode">Data Link Layer</div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-           width="128.2mm" height="75mm">
-        <svg viewbox="0 0 1282 750">
-          <polyline class="assoz" points="0,200 0,300 710,300 180,200 0,200" />
-          <polyline class="assoz"
-              points="1280,300 910,200 730,200 880,300" />
+      <svg class="drawing" width="128.2mm" height="50.3mm">
+        <svg viewbox="0 0 1282 503">
+          <polygon class="assoz" points="0,200 0,300 710,300 180,200" />
+          <polygon class="assoz" points="1280,300 910,200 730,200 880,300" />
         </svg>
       </svg>
+      <div class="description">
+        DLL Frames können sich von Protokoll zu Protokoll stark unterscheiden.
+        Der obere Aufbau ist beispielhaft.
+      </div>
     </div>
   <div>
 </body>

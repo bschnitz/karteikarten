@@ -15,7 +15,8 @@ bs.d3.textbox = (function(){
       .attr("height", "100%");
 
     textbox
-      .append("xhtml:div")
+      .append("xhtml:body")
+      .attr("xmlns", "http://www.w3.org/1999/xhtml")
       .style("width", function(d){return d.width;} )
       .append("div")
       .html( function(d){return d.text} );

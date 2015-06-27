@@ -6,6 +6,7 @@ body {
 }
 
 .description {
+  font-size: 5mm;
   text-align: justify;
   hyphens: auto;
 }
