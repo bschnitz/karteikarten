@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Netzmaskenermittlung (2/3)</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body style="width:100%; height:100%">
+
+<div id=outer>
+    <div id=inner>
+        <div class="title">
+            <div>Netzmaskenermittlung</div>
+            <a href="netzmaskenermittlung.html" class="navilink prev"><<</a>
+            <div class="episode">2/3</div>
+            <a href="netzmaskenermittlung-3.html" class="navilink next">>></a>
+        </div>
+        <div class="content">
+            <div class="question">Suche das höchste Bit in allen gegebenen Netzadressen, bis zu welchem alle Netzadressen in dem Netzwerk übereinstimmen, und gehe ein Bit weiter:</div>
+            <div class="spacer"></div>
+            <div id="frame"></div>
+            <div id="frameNet1"></div>
+            <div class="monospaced">
+                172.22.0.37 10101100.00010110.00000000.00100101
+                172.22.0.62 10101100.00010110.00000000.00111110
+            </div>
+            <div id="frameNet2"></div>
+            <div class="monospaced">
+                172.22.0.94 10101100.00010110.00000000.01011110
+                172.22.0.75 10101100.00010110.00000000.01001011
+            </div>
+            <div class="spacer"></div>
+            <div class="question">Mehr als 6 Bits können nicht entfernt werden, ohne dass die Netze nicht mehr unterscheidbar werden:</div>
+            <div class="monospaced-small">
+                /26 <br/>
+                <nobr>255.255.255.192 11111111.11111111.11111111.11000000</nobr>
+            </div>
+            <div class="spacer"></div>
+            <div class="question">5 Bits wären ebenfalls möglich, da die beiden IPs in den einzelnen Netzen hier noch gleich sind:</div>
+            <div class="monospaced-small">
+                /27 <br/>
+                <nobr>255.255.255.128 11111111.11111111.11111111.11100000</nobr>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

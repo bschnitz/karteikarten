@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Netzmaskenermittlung (2/2)</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+<div id=outer>
+    <div id=inner>
+        <div class="title">
+            <div>Adressartermittlung</div>
+            <a href="adressartermittlung.html" class="navilink prev"><<</a>
+            <div class="episode">2/3</div>
+            <a href="adressartermittlung-3.html" class="navilink next">>></a>
+        </div>
+        <div class="content">
+            <div class="monospaced-small">
+                172. 16.134. 64 &nbsp;10101100.00010000.10000110.01000000
+                255.255.255.224 &nbsp;11111111.11111111.11111111.11100000
+                <br/>
+                UND-verknüpft: &nbsp; 10101100.00010000.10000110.01000000
+
+            </div>
+            <div class="spacer"></div>
+            <ul>
+                <li class="question">Bleibt die Netzadresse nach der Verknüpfung mit der Subnetzmaske invariant, so muss es die Netzadresse selbst sein.</li>
+                <li class="question">Daraus ergibt sich die erste nutzbare Hostadresse .65.</li>
+                <li class="question">Da in der Subnetzmaske hinten 5 Bits in Folge auf 0 setehen, haben wir nur diese zur Verfügung.</li>
+                <li class="question">Somit können keine 64 Adressen untergebracht werden, womit 32 die nächstkleinere nutzbare Zahl wäre.</li>
+                <li class="question">Zwei Bits sind für Netzadresse und Broadcast belegt, womit 30 für hosts nutzbar sind.</li>
+                <li class="question">Daraus ergibt sich die letzte IP von .95 und eine broadcast von .96.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

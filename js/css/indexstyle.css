@@ -1,0 +1,224 @@
+/* Allgemein */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: auto;
+        background-image: url(../../content/images/bg.jpg); background-repeat: no-repeat; background-position: center;
+	width: 600px;
+        
+	font-family: 'Verdana';
+	font-size: 13px;
+	background-color: hsla(120, 100%, 50%, 0.25);
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+/* Header */
+
+header {
+    margin-top: 5px;
+    width: 600px;
+    height: 70px;
+        background-color: hsla(0,0%,0%,0.1);
+        -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 1px 15px hsla(0,0%,0%,0.5);
+               box-shadow: 0px 1px 15px hsla(0,0%,0%,0.4);
+
+   
+}
+
+#logo {
+    width: 250px;
+    height: 70px;
+    float: left;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 24px;
+    padding-left: 270px;
+    padding-top: 15px;
+}
+
+/* Navigation */
+
+nav {
+    position: relative;
+    width: 600px;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+nav ul { 
+    list-style-type: none;
+    margin-top: 10px; 
+    padding: 0;
+    background-color: #c2c2c2;
+}
+
+nav li {
+    float: left;
+    text-align: center;
+    width: 149px;
+    height: 31px;
+    border-right: 1px solid hsla(0,0%,0%,0.1);
+    margin: 0;
+    background-color: hsla(0,0%,100%,0.4);
+    -webkit-box-shadow: 0 2px 20px hsla(0,0%,0%,0.4);
+    box-shadow: 0px 2px 20px hsla(0,0%,0%,0.4);
+    text-shadow: 1px 1px 0 #f2f2f2;
+}
+
+li > a {
+    display:block;
+    padding-top: 6px;
+    width:100%;
+    height:29px;
+    vertical-align: -6px;
+    text-decoration: inherit;
+    color: black;
+}
+
+/* 
+reg background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#bfbfbf));
+    background: -moz-linear-gradient(top, #f2f2f2, #bfbfbf);
+    background: linear-gradient(#f2f2f2, #bfbfbf);
+    background-color: #c2c2c2;
+
+hov background: -webkit-gradient(linear, left top, left bottom, from(#bfbfbf), to(#f2f2f2));
+    background: -moz-linear-gradient(top, #bfbfbf, #f2f2f2);
+    background: -ms-linear-gradient(#bfbfbf, #f2f2f2);
+    background-color: #b3b3b3;
+*/
+
+nav li:hover {
+    
+    cursor: pointer;
+    color: #1883cb;
+       border-right: 1px solid white;
+    text-shadow: -1px -1px 0 white;
+    background-color: hsla(0,0%,50%,0.1);
+    -webkit-box-shadow: 2px 0px 20px hsla(0,0%,100%,0.5);
+    box-shadow: 2px 0px 20px hsla(0,0%,100%,0.5);
+    
+}
+
+nav li:first-of-type {
+    -webkit-border-top-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    border-top-left-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-bottom-left-radius: 6px;
+}
+    
+nav li:last-of-type {
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+.nav-active {
+    border-right: 1px solid white;
+    text-shadow: -1px -1px 0 white;
+    background-color: hsla(0,0%,50%,0.1);
+}
+
+/* Content */
+
+
+.column {
+    float: left;
+    width: 178px;
+    border:  1px dotted grey;
+    padding: 10px;
+}
+
+#column1 {
+    
+}
+
+#column2 {
+    
+}
+
+#column3 {
+    
+}
+
+
+/* Footer */
+
+footer {
+    position: absolute; bottom: 0px;
+    width: 590px;
+    height: 50px;
+    font-size: 8px;
+    background-color: hsla(0,0%,0%,0.5);
+    padding: 5px;
+    color: white;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-top-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    border-top-left-radius: 6px;
+    -webkit-box-shadow: 2px 0px 20px hsla(0,0%,100%,0.5);
+               box-shadow: 2px 0px 20px hsla(0,0%,100%,0.5);
+    
+}
+
+
+
+
+
+
+
+
+
+
+/*  Coin Slider jQuery plugin CSS styles  http://workshop.rs/projects/coin-slider  */
+
+.coin-slider { overflow: hidden; zoom: 1; 
+               position: relative; 
+               width: 600px; 
+               height: 330px; 
+               border: 0px solid black;              
+               -webkit-border-radius: 6px;
+               -moz-border-radius: 6px;
+               border-radius: 6px;
+               -webkit-box-shadow: 0 1px 20px hsla(0,0%,0%,0.5);
+               box-shadow: 0px 1px 20px hsla(0,0%,0%,0.5);
+              }
+              
+.coin-slider a{ text-decoration: none; outline: none; border: none; }
+.cs-buttons { font-size: 0px; padding-top: 10px; padding-bottom: 10px; float: left; }
+.cs-buttons a { margin-left: 5px; height: 10px; width: 10px; float: left; border: 1px solid #B8C4CF; color: #B8C4CF; text-indent: -1000px; }
+.cs-active { background-color: #B8C4CF; color: #FFFFFF; }
+
+.cs-title { width: auto; padding: 10px; background-color: #000000; color: #FFFFFF; }
+
+.cs-prev, 
+.cs-next { background-color: #000000; color: #FFFFFF; padding: 0px 10px; font-size: 28px; font-weight: bold; padding-bottom: 4px; }
