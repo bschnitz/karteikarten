@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Media Access Control 2</title>
+    <link rel="stylesheet" href="../../css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../../css/karte.css" type="text/css">
+    <link rel="stylesheet" href="../../css/table.css" type="text/css">
+    <script type="text/javascript" src="../../../d3/d3.v3.js"></script>
+    <script type="text/javascript" src="../../js/bs.js"></script>
+    <script type="text/javascript" src="../../js/d3/table.js"></script>
+    <style>
+      .title {
+        font-size: 6mm;
+      }
+      .description{
+        margin-top: 7mm;
+        font-size: 3.5mm;
+      }
+      .mini-title{
+        margin-top: 11mm;
+        font-size: 4mm;
+        font-variant: small-caps;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      .mini-title.second{
+        margin-top: 9mm;
+      }
+    </style>
+  </head>
+<body style="width:100%; height:100%" onload="create_classful_network_table()">
+  <div id=outer>
+    <div id=inner>
+      <div class="title">
+        <div>Media Access Control</div>
+        <div class="episode">Data Link Layer 2.2</div>
+      </div>
+      <div class="table">
+      </div>
+      <div class="content">
+        <div class="description">
+          <div class="mini-title">
+            Controlled Access for Shared Media
+          </div>
+          <p>
+            <ul>
+              <li>network devices <b>take turns</b> in sequence</li>
+              <li><b>predictable throughput</b></li>
+              <li><b>may be inefficient</b> because devices have to wait for
+                their turn</li>
+              <li>may be realized with token passing</li>
+            </ul>
+          </p>
+          <div class="mini-title second">
+            Contention-based Access for Shared Media
+          </div>
+          <p>
+            <ul>
+              <li>any device ist allowed to <b>send</b> data <b>at any
+                  time</b></li>
+              <li>uses <b>CSMA</b>, Carrier Sense Multiple Access:<br>
+                if a device detects that another device is sending data, it will
+                wait
+              </li>
+              <li><b>collision handling</b> in case devices send at the same
+                time</li>
+              <li>may be <b>inefficient under heavy load</b> because many
+                collisions may occeur</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- vim: set tw=80 colorcolumn=+1 : -->

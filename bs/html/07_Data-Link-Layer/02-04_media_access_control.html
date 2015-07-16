@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Media Access Control 2</title>
+  <link rel="stylesheet" href="../../css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../../css/karte.css" type="text/css">
+  <link rel="stylesheet" href="../../css/table.css" type="text/css">
+  <script type="text/javascript" src="../../../d3/d3.v3.js"></script>
+  <script type="text/javascript" src="../../js/bs.js"></script>
+  <script type="text/javascript" src="../../js/d3/table.js"></script>
+  <style>
+    .title {
+      font-size: 6mm;
+    }
+    .description{
+      margin-top: 4mm;
+      font-size: 3.5mm;
+    }
+    .mini-title{
+      font-size: 4mm;
+      font-variant: small-caps;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: -1.5mm;
+      padding-top: 1.5mm;
+    }
+    ul {
+      margin-left: 0mm;
+      padding-left: 0mm;
+    }
+    ul > ul {
+      padding-left: 5mm;
+    }
+  </style>
+</head>
+<body style="width:100%; height:100%">
+  <div id=outer>
+    <div id=inner>
+      <div class="title">
+        <div>Media Access Control</div>
+        <div class="episode">Data Link Layer 2.4</div>
+      </div>
+      <div class="table">
+      </div>
+      <div class="content">
+        <div class="description">
+          <div class="mini-title">
+            Physical Topology vs. Logical Topology
+          </div>
+          <p>
+            <ul>
+              <li><b>Physical Topology:</b> physical arrangement of nodes and
+                the physical connections between them</li>
+              <li><b>Logical Topology:</b> the way a network transfers frames
+                from one node to the next. consists of <b>virtual
+                connections</b>. the logical pathes are <b>defined by the DLL
+                protocolls</b>. influeces the network framing and the media
+                acces control methods used. </li>
+            </ul>
+          </p>
+          <div class="mini-title">
+            Example Topologies
+          </div>
+          <p>
+            <ul>
+              <li><b>Point-To-Point:</b> requires little or no control if
+              the media is not shared (this is the case if the physical topology
+              is a point-to-point topology).
+              <li><b>Multi-Access:</b> often used with CSMA/CD or CSMA/CA,
+              but also token passing is possible
+              <li><b>Ring</b></li>
+              <ul>
+                <li>frames are send from node to node to the destination in a
+                  circuit</li>
+                <li>often used together with a token passedfrom node to node;
+                  only the pocessor of that token may send data.</li>
+              </ul>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- vim: set tw=80 colorcolumn=+1 : -->
