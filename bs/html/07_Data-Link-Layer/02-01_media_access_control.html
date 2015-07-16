@@ -14,25 +14,43 @@
         font-size: 6mm;
       }
       .description{
+        margin-top: 9mm;
         font-size: 4mm;
       }
     </style>
   </head>
-<body style="width:100%; height:100%" onload="create_classful_network_table()">
+<body style="width:100%; height:100%">
   <div id=outer>
     <div id=inner>
       <div class="title">
         <div>Media Access Control</div>
-        <div class="episode">Data Link Layer 2/1</div>
+        <div class="episode">Data Link Layer 2.1</div>
       </div>
       <div class="table">
       </div>
       <div class="content">
         <div class="description">
           <p>
-          <b>Media access control</b> regulates the placement of data frames
-          onto the media.
+            <b>Media access control</b> regulates the placement of data frames
+            onto the media.
           </p>
+            The method of media access control used depends on
+            <ul>
+              <li><b>Media sharing</b> - If and how the nodes share the
+                media</li>
+              <li><b>Topology</b> - How the connection between the nodes appears
+                to the Data Link Layer</li>
+            </ul>
+          <p>
+          </p>
+            There are <b>two basic media access control methods</b> for shared
+            media:
+            <ul>
+              <li><b>Controlled</b> - Each node has its own time to use the
+                medium</li>
+              <li><b>Contention-based</b> - All nodes compete for the use of the
+                medium</li>
+            </ul>
           <p>
           </p>
         </div>

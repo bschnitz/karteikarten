@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Media Access Control 3</title>
+    <link rel="stylesheet" href="../../css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../../css/karte.css" type="text/css">
+    <link rel="stylesheet" href="../../css/table.css" type="text/css">
+    <script type="text/javascript" src="../../../d3/d3.v3.js"></script>
+    <script type="text/javascript" src="../../js/bs.js"></script>
+    <script type="text/javascript" src="../../js/d3/table.js"></script>
+    <style>
+      .title {
+        font-size: 6mm;
+      }
+      .description{
+        margin-top: 5mm;
+        font-size: 3.5mm;
+      }
+      .mini-title{
+        font-size: 4mm;
+        margin-bottom: -2mm;
+        font-variant: small-caps;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+<body style="width:100%; height:100%" onload="create_classful_network_table()">
+  <div id=outer>
+    <div id=inner>
+      <div class="title">
+        <div>Media Access Control</div>
+        <div class="episode">Data Link Layer 2.3</div>
+      </div>
+      <div class="table">
+      </div>
+      <div class="content">
+        <div class="description">
+          <div class="mini-title">
+            Carrier Sense Multiple Access (CSMA)
+          </div>
+          <p>
+            detection of other devices trying to send, detection and handling of
+            collistions.
+          </p>
+          <div class="mini-title">
+            CSMA/Collision Detection (CSMA/CD)
+          </div>
+          <p>
+            <ul>
+              <li>devices <b>listen for signals</b> and send if media is
+                free</li>
+              <li>in case of <b>concurrent media access</b> all
+                <b>devices stop</b> to send data <b>and wait</b> a small amount
+                of time</li>
+              <li>used for traditional forms of Ethernet</li>
+            </ul>
+          </p>
+          <div class="mini-title">
+            CSMA/Collision Avoidance (CSMA/CA)
+          </div>
+          <p>
+            <ul>
+              <li>devices <b>listen for signals</b> and <b>send a
+                notification</b> of their intent to use the media <b>then</b>
+                they <b>send</b> their data</li>
+              <li>specifies a <b>random backoff</b> procedure for all waiting
+                nodes (the most likely opportunity for medium contention is just
+                after the medium becomes available. making nodes backoff for a
+                random time period reduces the likelihood of collisions.)
+              </li>
+              <li>used by 802.11 wireless networking technologies</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- vim: set tw=80 colorcolumn=+1 : -->
