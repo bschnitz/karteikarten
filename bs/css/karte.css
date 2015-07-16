@@ -23,7 +23,9 @@ body {
   margin:0px;
   padding:0px;
   font-size:0.65cm;
-  font-family:Cantarell;
+  /*font-family:Cantarell;*/
+  font-family: Century Gothic, sans-serif;
+  letter-spacing: 0px;
 }
 
 .content {
